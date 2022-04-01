@@ -66,7 +66,7 @@ try {
             })
             .then(data => {
                 var jobs = {}
-                data.jobs.filter(job => job.status !== 'completed').forEach(job => {
+                data.jobs.filter(job => job.status == 'completed').forEach(job => {
                     console.log(`adding job '${job.id}/${job.name}' with status '${job.status}' and conclusion '${job.conclusion}'`)
                     jobs[job.id] = {
                         job_id: job.id,
