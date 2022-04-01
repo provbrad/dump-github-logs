@@ -93,7 +93,7 @@ try {
                             return response.text()
                         })
                         .then(data => {
-                            console.log(`Writing data, len=${len(data)}`)
+                            console.log(`Writing data, length=${data.length}`)
                             if (outfile) { fs.writeFileSync(outfile, data) }
                             else { core.setOutput("result", data) }
                         })
